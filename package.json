@@ -1,0 +1,28 @@
+{
+  "name": "recipes-node-server-app",
+  "version": "1.0.0",
+  "description": "Node server app for recipe recommendation application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juhisb/recipes-node-server-app.git"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Juhi Bhagtani, Vibhore Maheshwari, Mary Joseph, Ankit Saxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juhisb/recipes-node-server-app/issues"
+  },
+  "homepage": "https://github.com/juhisb/recipes-node-server-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
