@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "recipes-node-server-app",
   "version": "1.0.0",
   "description": "Node server app for recipe recommendation application",
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/juhisb/recipes-node-server-app#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.0.3"
   }
 }
