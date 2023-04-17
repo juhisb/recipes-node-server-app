@@ -3,6 +3,7 @@ import cors from 'cors';
 import session from 'express-session';
 import mongoose from "mongoose";
 import * as constants from './constants.js';
+import UsersController from "./controllers/users-controller.js";
 
 const options = {
     useNewUrlParser: true,
@@ -21,7 +22,7 @@ const app = express()
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000/'
+    origin: 'http://localhost:3000'
 }))
 
 app.set('trust proxy', 1)
@@ -43,4 +44,5 @@ app.get('/', (req, res) => {
     res.send('Welcome to Recipe Node Server!');
 });
 
+UsersController(app);
 app.listen(process.env.PORT || 4000);
