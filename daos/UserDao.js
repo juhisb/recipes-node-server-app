@@ -14,6 +14,12 @@ export const findByCredentials = (username, password) =>
         {password: false}
     );
 
+export const findAdminByCredentials = (username, password, accountType) =>
+    userModel.findOne(
+        {username: username, password: password, accountType: accountType},
+        {password: false}
+    );
+
 export const deleteUser = (id) => userModel.deleteOne({_id: id})
 
 export const updateUser = (id, userUpdates) =>

@@ -4,6 +4,8 @@ import session from 'express-session';
 import mongoose from "mongoose";
 import * as constants from './constants.js';
 import UsersController from "./controllers/users-controller.js";
+import ReviewerController from "./controllers/reviewer-controller.js";
+import AdminController from "./controllers/admin-controller.js";
 
 const options = {
     useNewUrlParser: true,
@@ -45,4 +47,6 @@ app.get('/', (req, res) => {
 });
 
 UsersController(app);
+ReviewerController(app);
+AdminController(app);
 app.listen(process.env.PORT || 4000);
