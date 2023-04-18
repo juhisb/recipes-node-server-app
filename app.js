@@ -18,7 +18,7 @@ const options = {
 }
 
 console.log(constants.mongo_url);
-mongoose.connect(constants.mongo_url, options);
+mongoose.connect(constants.mongo_url);
 
 const app = express()
 
@@ -31,13 +31,13 @@ app.set('trust proxy', 1)
 app.use(session({
     secret: 'secretKEYabc',
     resave: false,
-    name: 'cookieName',
     saveUninitialized: true,
-    cookie: {
-        secure: true,
-        httpOnly: false,
-        sameSite: 'none'
-    }
+    // name: 'cookieName',
+    // cookie: {
+    //     secure: true,
+    //     httpOnly: false,
+    //     sameSite: 'none'
+    // }
 }))
 
 app.use(express.json({limit: '50mb'}));
