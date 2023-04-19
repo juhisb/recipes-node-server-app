@@ -10,7 +10,7 @@ export const findByUsername = (username) => userModel.findOne({username});
 
 export const findByCredentials = (username, password) =>
     userModel.findOne(
-        {username, password},
+        {username, password, accountType: { $in: [ "USER", "REVIEWER" ] } },
         {password: false}
     );
 
