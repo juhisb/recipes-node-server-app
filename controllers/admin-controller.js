@@ -5,6 +5,7 @@ const AdminController = (app) => {
         const credentials = req.body;
 
         const existingUser = await userDao.findAdminByCredentials(credentials.username, credentials.password, "ADMIN")
+        console.log(existingUser)
         if (!existingUser) {
             res.sendStatus(401)
             return

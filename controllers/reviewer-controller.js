@@ -45,6 +45,7 @@ const ReviewerController = (app) => {
 
     const findReviewerExist = async (req, res) => {
         const username = req.params.username;
+        console.log(username)
         const rev = await reviewerDao.findReviewerExist(username);
         res.json(rev)
     }
