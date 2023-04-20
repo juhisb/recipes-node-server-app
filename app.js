@@ -7,6 +7,7 @@ import UsersController from "./controllers/users-controller.js";
 import ReviewerController from "./controllers/reviewer-controller.js";
 import AdminController from "./controllers/admin-controller.js";
 import FollowingController from "./controllers/following-controller.js";
+import ReviewController from "./controllers/review-controller.js";
 
 const options = {
     useNewUrlParser: true,
@@ -51,4 +52,5 @@ UsersController(app);
 ReviewerController(app);
 AdminController(app);
 FollowingController(app);
+ReviewController(app);
 app.listen(process.env.PORT || 4000);
