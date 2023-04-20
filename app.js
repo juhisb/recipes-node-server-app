@@ -6,6 +6,7 @@ import * as constants from './constants.js';
 import UsersController from "./controllers/users-controller.js";
 import ReviewerController from "./controllers/reviewer-controller.js";
 import AdminController from "./controllers/admin-controller.js";
+import FollowingController from "./controllers/following-controller.js";
 
 const options = {
     useNewUrlParser: true,
@@ -49,4 +50,5 @@ app.get('/', (req, res) => {
 UsersController(app);
 ReviewerController(app);
 AdminController(app);
+FollowingController(app);
 app.listen(process.env.PORT || 4000);
