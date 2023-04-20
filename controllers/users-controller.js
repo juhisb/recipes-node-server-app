@@ -50,6 +50,7 @@ const UsersController = (app) => {
             return
         }
         req.session['currentUser'] = existingUser
+        console.log("Session !!!!!!!!!!!!! ",req.session['currentUser']);
         res.json(existingUser)
     }
 
